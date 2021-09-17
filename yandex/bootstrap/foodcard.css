@@ -1,0 +1,5 @@
+.foodcart {
+	height: calc(((((100vw - 80px - 140px + 36px) / 3) - 36px) * 0.59) + 110px);
+	width: 33.333333333333336%;
+	background: red;
+}

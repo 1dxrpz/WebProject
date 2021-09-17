@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instagram</title>
+	<link rel="icon" type="image/png" href="./favicon.png" sizes="96x96">
+	<link rel="stylesheet" type="text/css" href="styles/index.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<div class="phone_image_wrapper">
+				<img class="phone_image" src="images/phone.png" />
+				<img class="screenshot" src="images/screenshot.jpg">
+			</div>
+			<div class="form_container flex_wrapper">
+				<div class="wrapper">
+					<div class="form_wrapper">
+						<div class="logo"></div>
+						<form class="form">
+							<div class="wrapper">
+								<div class="input_wrapper">
+									<input id="login" placeholder="" oninput="ValidateForm();" />
+									<span class="placeholder login">Телефон, имя пользователя или эл. адрес</span>
+								</div>
+								<div class="input_wrapper">
+									<input placeholder="" type="password" id="password" oninput="ValidateForm();" />
+									<span class="placeholder password">Пароль</span>
+									<span class="toggle" onclick="togglePassword(this)"> Показать </span>
+								</div>
+							</div>
+						</form>
+						<button enabled="false" class="button" onclick="LoginErrorAlert()" >Войти</button>
+						<div class="spacer">
+							<div class="text">ИЛИ</div>
+						</div>
+						<div class="facebook">
+							<span class="facebook_icon"></span>
+							<a class="text link" href="https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%252218wj8uhbcsk1116cqsq2iumn131nr7jka1ni8ite1a2r3zu1p52chr%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Dru_RU%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D71614a31-db47-4cfb-9607-454834524cfc%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%252218wj8uhbcsk1116cqsq2iumn131nr7jka1ni8ite1a2r3zu1p52chr%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%2522%257D%23_%3D_&display=page&locale=ru_RU&pl_dbl=0">Войти через Facebook</a>
+						</div>
+						<div class="login_error_wrapper">
+							<div class="login_error" id="LoginError">
+								К сожалению, вы ввели неправильный пароль. Проверьте свой пароль еще раз.
+							</div>
+						</div>
+						<a class="password_recover link" href="https://www.instagram.com/accounts/password/reset/">Забыли пароль?</a>
+					</div>
+					<div class="form_wrapper">
+						<div class="register">
+							У вас ещё нет аккаунта?
+							<span><a class="link" href="https://www.instagram.com/accounts/emailsignup/"><span>Зарегистрироваться</a></span>
+						</div>
+					</div>
+					<div class="transparent_wrapper">
+						Установите приложение.
+					</div>
+					<div class="downloads">
+						<a class="link" href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&ct=igweb.loginPage.badge&mt=8&vt=lo">
+							<img src="images/appstore.png" />
+						</a>
+						<a class="link" href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DF9F468C9-EED1-4462-BA42-D253DD390C12%26utm_content%3Dlo%26utm_medium%3Dbadge">
+							<img src="images/google_play.png" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="footer_container">
+				<div class="row">
+					<a class="link">Информация</a>
+					<a class="link">Блог</a>
+					<a class="link">Вакансии</a>
+					<a class="link">Помощь</a>
+					<a class="link">API</a>
+					<a class="link">Конфиденциальность</a>
+					<a class="link">Условия</a>
+					<a class="link">Популярные аккаунты</a>
+					<a class="link">Хэштеги</a>
+					<a class="link">Места</a>
+					<a class="link">Instagram Lite</a>
+				</div>
+				<div class="row">
+					<a class="link">Красота</a>
+					<a class="link">Танцы</a>
+					<a class="link">Фитнес</a>
+					<a class="link">Еда и напитки</a>
+					<a class="link">Дом и сад</a>
+					<a class="link">Музыка</a>
+					<a class="link">Изобразительное искусство</a>
+				</div>
+				<div class="row">
+					<div class="link">
+						<select class="language">
+							<option value="af">Afrikaans</option>
+							<option value="cs">Čeština</option>
+							<option value="da">Dansk</option>
+							<option value="de">Deutsch</option>
+							<option value="el">Ελληνικά</option>
+							<option value="en">English</option>
+							<option value="en-gb">English (UK)</option>
+							<option value="es">Español (España)</option>
+							<option value="es-la">Español</option>
+							<option value="fi">Suomi</option>
+							<option value="fr">Français</option>
+							<option value="id">Bahasa Indonesia</option>
+							<option value="it">Italiano</option>
+							<option value="ja">日本語</option>
+							<option value="ko">한국어</option>
+							<option value="ms">Bahasa Melayu</option>
+							<option value="nb">Norsk</option>
+							<option value="nl">Nederlands</option>
+							<option value="pl">Polski</option>
+							<option value="pt-br">Português (Brasil)</option>
+							<option value="pt">Português (Portugal)</option>
+							<option value="ru" selected>Русский</option>
+							<option value="sv">Svenska</option>
+							<option value="th">ภาษาไทย</option>
+							<option value="tl">Filipino</option>
+							<option value="tr">Türkçe</option>
+							<option value="zh-cn">中文(简体)</option>
+							<option value="zh-tw">中文(台灣)</option>
+							<option value="bn">বাংলা</option>
+							<option value="gu">ગુજરાતી</option>
+							<option value="hi">हिन्दी</option>
+							<option value="hr">Hrvatski</option>
+							<option value="hu">Magyar</option>
+							<option value="kn">ಕನ್ನಡ</option>
+							<option value="ml">മലയാളം</option>
+							<option value="mr">मराठी</option>
+							<option value="ne">नेपाली</option>
+							<option value="pa">ਪੰਜਾਬੀ</option>
+							<option value="si">සිංහල</option>
+							<option value="sk">Slovenčina</option>
+							<option value="ta">தமிழ்</option>
+							<option value="te">తెలుగు</option>
+							<option value="vi">Tiếng Việt</option>
+							<option value="zh-hk">中文(香港)</option>
+							<option value="bg">Български</option>
+							<option value="fr-ca">Français (Canada)</option>
+							<option value="ro">Română</option>
+							<option value="sr">Српски</option>
+							<option value="uk">Українська</option>
+						</select>
+					</div>
+					<div class="link">© Instagram от Facebook, 2021</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script type="text/javascript">
+		var LoginButton = document.querySelector(".button");
+		var LoginInput = document.getElementById("login");
+		var PasswordInput = document.getElementById("password");
+		var LoginnErrorText = document.getElementById("LoginError");
+
+		function togglePassword(e) {
+			if (PasswordInput.type === "password") {
+				PasswordInput.type = "text";
+				e.innerHTML = "Скрыть";
+			} else {
+				PasswordInput.type = "password";
+				e.innerHTML = "Показать";
+			}
+		}
+		
+		function ValidateForm () {
+			LoginButton.setAttribute("enabled", 
+				PasswordInput.value.length > 5 &&
+				LoginInput.value.length > 0 ?
+				"true" : "false"
+			);
+		}
+
+		function LoginErrorAlert() {
+			LoginnErrorText.classList.add("flex_wrapper");
+		}
+	</script>
+</body>
+</html>

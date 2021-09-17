@@ -1,0 +1,234 @@
+@import "../bootstrap/index.css";
+@import "../bootstrap/foodcard.css";
+@import "../bootstrap/logo.css";
+
+
+*.color-scheme {
+	--default_yellow: #fce000;
+	--default_gold: #fce000;
+	--default_dark: #21201f;
+	--default-light: #f9f9f9;
+	
+	--black: #000000;
+	--neutral: #c4c2be;
+	--gold: #fac220;
+	--green: #48c600;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+	font-family: YSText, helvetica, arial, sans-serif;
+}
+#header {
+	width: 100%;
+	height: 80px;
+	background: #ffffff;
+	padding: 0 20px;
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.header-shadow {
+	transition: box-shadow 0.2s ease-in-out;
+}
+.header-shadow[data-shadow="false"] {
+	box-shadow: none;
+}
+.header-shadow[data-shadow="true"] {
+	box-shadow: 0 8px 20px rgba(117, 115, 111, 0.2);
+}
+#header .header {
+	border-bottom: 1px solid #D2D0CC;
+	width: 100%;
+	height: 100%;
+}
+#header .header_wrapper {
+	height: 48px;
+	width: 100%;
+	position: relative;
+}
+#header .header_wrapper .logo {
+	margin-bottom: 6px;
+	margin-right: 30px;
+}
+#header .search_wrapper {
+	width: 400px;
+	height: 46px;
+	flex: 1 1 50%;
+	max-width: 400px;
+}
+#header .logo_wrapper {
+
+	flex: 0 0 auto;
+}
+#header .search_wrapper .search {
+	height: 100%;
+	width: 100%;
+	min-width: 150px;
+	padding: 0 30px 0 18px;
+	box-shadow: none;
+	border-radius: 16px;
+	box-sizing: border-box;
+	border: 2px solid var(--default_yellow);
+	font-size: 100%;
+	font-family: inherit;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#header .search_wrapper .search:focus {
+
+	outline: none;
+}
+#header .address_wrapper {
+	height: 100%;
+	
+	margin-left: 12px;
+	width: 399px;
+	font-family: inherit;
+	line-height: 22px;
+	box-sizing: border-box;
+}
+#header .address_wrapper .address {
+	font-family: inherit;
+	padding: 13px 18px;
+	color: var(--default_dark);
+	background: var(--default_gold);
+	border-radius: 16px;
+	height: 48px;
+	box-sizing: border-box;
+	font-size: 100%;
+	font-weight: 600;
+	white-space: nowrap;
+}
+#header .address_wrapper .address .arrow-icon {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	
+	margin-right: 2px;
+	top: -1px;
+}
+#header .buttons_wrapper {
+	width: 84px;
+	position: relative;
+	flex: none;
+}
+#header .buttons_wrapper .buttons {
+
+	width: 100%;
+}
+#header .left_container, #header .right_container {
+
+	
+}
+#header .left_container {
+
+	width: 100%;
+}
+#header .right_container {
+	width: 84px;
+	flex: none;
+}
+.buttons_wrapper .buttons {
+
+	
+}
+.buttons_wrapper .menu {
+	width: 24px;
+	height: 24px;
+	padding: 4px;
+	box-sizing: border-box;
+}
+.buttons_wrapper .account {
+	width: 40px;
+	height: 40px;
+	background: red;
+	border-radius: 100%;
+	margin-left: 12px;
+}
+
+@media screen and (max-width: 1280px)
+{
+	#header .header_wrapper .logo {
+		margin-bottom: 0px;
+		margin-right: 12px;
+	}
+}
+
+#main {
+	margin-top: 128px;
+	margin-bottom: 90px;
+}
+
+#footer {
+	min-width: 1024px;
+	width: 100%;
+	background: var(--default-light);
+}
+#footer .footer_apps {
+	
+	padding: 30px 120px;
+}
+#footer .footer_apps .default-logo {
+	opacity: 0.3;
+}
+#footer .app_store-logo {
+	margin-left: auto;
+	margin-right: 20px;
+}
+#footer .google_play-logo {
+	margin-right: 20px;
+}
+#footer .divider {
+	border-top: 1px solid #efefef;
+}
+#footer .footer_menu {
+	padding: 51px 120px 33px;
+	max-width: 1500px;
+	margin: 0 auto;
+}
+#footer .footer_menu .column {
+	min-width: 210px;
+}
+#footer .footer_menu .column.info {
+	text-align: right;
+	margin-left: auto;
+}
+
+#footer .footer_menu .column ul {
+	list-style: none;
+	padding: 0;
+}
+#footer .footer_menu .column ul li {
+	margin-bottom: 20px;
+	font-size: 13px;
+	color: #b0b0b0;
+	font-family: YSText, helvetica, arial, sans-serif;
+}
+#footer .footer_menu .column ul li.mail {
+	padding-top: 10px;
+}
+#footer .footer_menu .column ul li.mail .mail-icon {
+	position: relative;
+	top: 8px;
+	right: 5px;
+	display: inline-block;
+}
+#footer .footer_menu .column h3 {
+	color: #646464;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 1.76;
+	margin-bottom: 24px;
+}
+
+#footer .footer_bottom {
+	padding: 30px 120px;
+}
+#footer .footer_bottom .copyright {
+	color: #b8b8b8;
+	font-size: 13px;
+}
